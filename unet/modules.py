@@ -1,5 +1,7 @@
 import math
 
+import numpy as np
+
 from einops import rearrange, parse_shape, repeat
 
 import torch
@@ -48,7 +50,7 @@ class AttentionBlock(nn.Module):
         out = F.scaled_dot_product_attention(q, k, v)
         out = rearrange(out, 'b (h w) c -> b c h w', **parse_shape(x, 'b c h w'))
 
-        return x + self.proj(out)
+        return (x + self.proj(out)) / np.sqrt(2.0)
 
 def make_skip_connection(dim_in, dim_out):
     if dim_in == dim_out:
@@ -108,7 +110,7 @@ class ResBlock(nn.Module):
             h = h + emb
             h = self.block2(h)
 
-        h = self.skip_connection(x) + h
+        h = (self.skip_connection(x) + h) / np.sqrt(2.0)
         return self.attn(h)
 
 
