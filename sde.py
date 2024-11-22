@@ -7,6 +7,10 @@ class SubVPSDE:
         self.beta_T = config['beta_max']
         self.T = config['timesteps']
     
+    @property
+    def T(self):
+        return 1
+
     def sde(self, x, t):
         beta_t = self.beta_0 + t * (self.beta_T - self.beta_0)
         drift = -0.5 * beta_t[:, None, None, None] * x
@@ -20,3 +24,6 @@ class SubVPSDE:
         mean = torch.exp(log_mean_coeff)[:, None, None, None] * x
         std = 1.0 - torch.exp(2.0 * log_mean_coeff)
         return mean, std
+
+    def prior_sampling(self, shape):
+        return torch.randn(*shape)
