@@ -1,0 +1,11 @@
+train:
+  optimizer: adamw
+  precision: 16-mixed
+  epochs: 150
+
+run:
+  scale_shift: True
+  scheduler_type: cosine
+  guidance: True
+  num_classes: 10
+  p_cond: 0.2
