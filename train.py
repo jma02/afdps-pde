@@ -23,7 +23,7 @@ def get_loss_fn(sde: SubVPSDE, eps=1e-5):
         losses = torch.square(score * std[:, None, None, None] + z)
         losses = torch.mean(losses.reshape(losses.shape[0], -1), dim=-1)
 
-        return losses
+        return torch.mean(losses)
     return loss_fn
 
 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         'warmup': 5000,
         'batch_size': 128,
         'epochs': 100,
-        'log_freq': 50,
+        'log_freq': 100,
         'eval_freq': 5,
         'num_workers': 2,
     }
@@ -81,3 +81,4 @@ if __name__ == '__main__':
                 gen_x = sampler.sample(sde, score_fn, (64, 3, 32, 32))
                 image = make_im_grid(gen_x, (8, 8))
                 image.save(f'samples/{epoch}.png')
+        break

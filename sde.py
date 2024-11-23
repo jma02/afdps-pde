@@ -72,7 +72,7 @@ class EulerMaruayamaPredictor:
     
     @torch.no_grad()
     def sample(self, sde, score_fn, shape, eps=1e-3, device='cuda'):
-        x = sde.prior_sampling(shape)
+        x = sde.prior_sampling(shape).to(device)
         timesteps = torch.linspace(sde.T, eps, sde.N, device=device)
 
         for i in range(sde.N):
