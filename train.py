@@ -2,18 +2,13 @@ import numpy as np
 
 import torch
 
-from sde import SubVPSDE
+from sde import SubVPSDE, get_score_fn
 from unet import Unet
+from utils import get_loaders
 
 
-def get_score_fn(sde: SubVPSDE, model: Unet):
-    def score_fn(x, t):
-        labels = t * 999 # [0, 1] -> [0, 999]
-        score = model(x, labels)
-        std = sde.marginal_prob(torch.zeros_like(x), t)[1]
-        score = -score / std[:, None, None, None]
-        return score
-    return score_fn
+torch.manual_seed(159753)
+np.random.seed(159753)
 
 
 def get_loss_fn(sde: SubVPSDE, eps=1e-5):
@@ -41,7 +36,7 @@ if __name__ == '__main__':
     sde = SubVPSDE(config)
 
     optim = torch.optim.Adam(model.parameters(), lr=config['lr'])
-    train_loader, test_loader = ...
+    train_loader, test_loader = get_loaders(config)
     
     loss_fn = get_loss_fn(sde)
     step = 0
