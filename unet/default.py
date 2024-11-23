@@ -14,7 +14,7 @@ from unet.modules import (
 
 class Unet(nn.Module):
     def __init__(
-            self, 
+            self,
             ch: int = 128, 
             ch_mul: List[int] = [1, 2, 2, 2], 
             att_channels: List[int] = [0, 1, 0, 0], 

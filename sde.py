@@ -61,26 +61,22 @@ def get_score_fn(sde: SubVPSDE, model: Unet):
     return score_fn
 
 
-class EulerMaruayamaPredictor:
-    def __init__(self, sde: SubVPSDE, score_fn):
-        self.sde = sde
-        self.score_fn = score_fn
-    
-    def update_fn(self, x, t):
-        dt = -1. / self.sde.N
+class EulerMaruayamaPredictor:    
+    def update_fn(self, sde, score_fn, x, t):
+        dt = -1. / sde.N
         z = torch.randn_like(x)
-        drift, diffusion = self.sde.reverse_sde(self.score_fn, x, t)
+        drift, diffusion = sde.reverse_sde(score_fn, x, t)
         x_mean = x + drift * dt
         x = x_mean + diffusion[:, None, None, None] * np.sqrt(-dt) * z
         return x, x_mean
     
     @torch.no_grad()
-    def sample(self, shape, eps=1e-3, device='cuda'):
-        x = self.sde.prior_sampling(shape)
-        timesteps = torch.linspace(self.sde.T, eps, self.sde.N, device=device)
+    def sample(self, sde, score_fn, shape, eps=1e-3, device='cuda'):
+        x = sde.prior_sampling(shape)
+        timesteps = torch.linspace(sde.T, eps, sde.N, device=device)
 
-        for i in range(self.sde.N):
+        for i in range(sde.N):
             t = torch.ones(shape[0], device=device) * timesteps[i]
-            x, x_mean = self.update_fn(x, t)
+            x, x_mean = self.update_fn(sde, score_fn, x, t)
         
         return x_mean # Still in [-1, 1]
