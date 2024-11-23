@@ -5,7 +5,7 @@ class SubVPSDE:
     def __init__(self, config):
         self.beta_0 = config['beta_min']
         self.beta_T = config['beta_max']
-        self.T = config['timesteps']
+        self.N = config['timesteps']
     
     @property
     def T(self):
