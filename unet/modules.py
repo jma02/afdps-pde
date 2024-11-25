@@ -52,6 +52,7 @@ class AttentionBlock(nn.Module):
 
         return (x + self.proj(out)) / np.sqrt(2.0)
 
+
 def make_skip_connection(dim_in, dim_out):
     if dim_in == dim_out:
         return nn.Identity()

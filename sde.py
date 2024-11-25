@@ -70,13 +70,16 @@ class EulerMaruayamaPredictor:
         x = x_mean + diffusion[:, None, None, None] * np.sqrt(-dt) * z
         return x, x_mean
     
-    @torch.no_grad()
-    def sample(self, sde, score_fn, shape, eps=1e-3, device='cuda'):
-        x = sde.prior_sampling(shape).to(device)
-        timesteps = torch.linspace(sde.T, eps, sde.N, device=device)
+@torch.no_grad()
+def sample_images(sde, score_fn, shape, eps = 1e-3, device = 'cuda', 
+                  predictor: EulerMaruayamaPredictor = None):
+    assert predictor is not None
 
-        for i in range(sde.N):
-            t = torch.ones(shape[0], device=device) * timesteps[i]
-            x, x_mean = self.update_fn(sde, score_fn, x, t)
-        
-        return x_mean # Still in [-1, 1]
+    x = sde.prior_sampling(shape).to(device)
+    timesteps = torch.linspace(sde.T, eps, sde.N, device=device)
+
+    for i in range(sde.N):
+        t = torch.ones(shape[0], device=device) * timesteps[i]
+        x, x_mean = predictor.update_fn(sde, score_fn, x, t)
+    
+    return x_mean # Still in [-1, 1]
