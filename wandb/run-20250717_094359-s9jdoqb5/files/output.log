@@ -1,0 +1,14 @@
+Train set shape: torch.Size([21000, 1, 64, 64])
+Validation set shape: torch.Size([4500, 1, 64, 64])
+Test set shape: torch.Size([4500, 1, 64, 64])
+Epochs:   1%|█▎                                                                                                                               | 1/100 [02:58<4:54:18, 178.37s/it]
+Traceback (most recent call last):                                                                                                                                               
+Step: 99 (1) | Loss: 0.47531 | Grad: 5.44961
+Generating samples at epoch 1
+Step: 199 (2) | Loss: 0.15005 | Grad: 0.45295
+Step: 299 (2) | Loss: 0.08460 | Grad: 0.45136
+  File "/home/johnma/afdps-pde/train.py", line 89, in <module>
+    ema_model.update_parameters(model)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/optim/swa_utils.py", line 277, in update_parameters
+    self_params, model_params, self.n_averaged.to(device)  # type: ignore[arg-type]
+KeyboardInterrupt

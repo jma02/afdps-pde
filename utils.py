@@ -5,6 +5,8 @@ from torchvision import datasets
 from torch.utils.data import DataLoader
 import torchvision.transforms.v2 as v2
 
+from torch.utils.data import TensorDataset
+
 from einops import rearrange
 
 
@@ -23,17 +25,26 @@ def make_im_grid(x0: torch.Tensor, xy: tuple=(1, 10)):
 
 
 def get_loaders(config):
-    train_transform = v2.Compose([v2.ToImage(),
-                                  v2.RandomHorizontalFlip(),
-                                  v2.ToDtype(torch.float32, scale=True),
-                                  v2.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),])
+    dataset = torch.load('data/curve_vel_b.pt')
 
-    test_transform = v2.Compose([v2.ToImage(),
-                                 v2.ToDtype(torch.float32, scale=True),
-                                 v2.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5]),])
+    print(f"Train set shape: {dataset['train'].shape}")
+    print(f"Validation set shape: {dataset['val'].shape}")
+    print(f"Test set shape: {dataset['test'].shape}")
 
-    train = datasets.CIFAR10('data/', download=True, train=True, transform=train_transform)
-    test = datasets.CIFAR10('data/', download=True, train=False, transform=test_transform)
+    train_min = dataset['train'].min()
+    train_max = dataset['train'].max()
+    val_min = dataset['val'].min()
+    val_max = dataset['val'].max()
+
+    dataset_train = dataset['train']
+    dataset_val = dataset['val']
+
+    dataset_train = 2.0 * (dataset_train - train_min) / (train_max - train_min) - 1.0
+    dataset_val = 2.0 * (dataset_val - val_min) / (val_max - val_min) - 1.0
+
+
+    train = TensorDataset(dataset_train.detach().clone())
+    test = TensorDataset(dataset_val.detach().clone())
 
     bs = config['batch_size']
     j = config['num_workers']

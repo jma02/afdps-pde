@@ -1,0 +1,76 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            hk708t0w82qer05m2ckn3zvxqsreffsg:
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 32
+                cpu_count_logical: 64
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "75094818816"
+                        used: "30937591808"
+                email: ma.jonathan02@gmail.com
+                executable: /home/johnma/afdps-pde/venv/bin/python
+                git:
+                    commit: e5827c06d1b5e39a9406fb87972302cd25e733c6
+                    remote: https://github.com/jma02/afdps-pde
+                gpu: NVIDIA RTX 6000 Ada Generation
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX 6000 Ada Generation
+                      uuid: GPU-c44b86bf-148d-aa7e-32ec-77d4f2f7ce71
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "51527024640"
+                      name: NVIDIA RTX 6000 Ada Generation
+                      uuid: GPU-df1365ae-00a9-6ee4-b3f9-f600faea48a4
+                host: kechen-ml.math.udel.edu
+                memory:
+                    total: "540193247232"
+                os: Linux-5.14.0-570.18.1.el9_6.x86_64-x86_64-with-glibc2.34
+                program: /home/johnma/afdps-pde/train.py
+                python: CPython 3.9.21
+                root: /home/johnma/afdps-pde
+                startedAt: "2025-07-17T13:43:59.230981Z"
+                writerId: hk708t0w82qer05m2ckn3zvxqsreffsg
+        m: []
+        python_version: 3.9.21
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 16
+            "4": 3.9.21
+            "5": 0.21.0
+            "12": 0.21.0
+            "13": linux-x86_64
+batch_size:
+    value: 128
+beta_max:
+    value: 20
+beta_min:
+    value: 0.1
+epochs:
+    value: 100
+log_freq:
+    value: 100
+lr:
+    value: 0.0002
+num_workers:
+    value: 0
+timesteps:
+    value: 1000
+use_ema:
+    value: true
+warmup:
+    value: 5000

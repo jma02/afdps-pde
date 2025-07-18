@@ -1,0 +1,29 @@
+Train set shape: torch.Size([21000, 1, 64, 64])
+Validation set shape: torch.Size([4500, 1, 64, 64])
+Test set shape: torch.Size([4500, 1, 64, 64])
+Epochs:   0%|                                                                                                                       | 0/100 [01:36<?, ?it/s]
+Traceback (most recent call last):                                                                                                                          
+Step: 99 (1) | Loss: 1.00229 | Grad: 0.40642
+Generating samples at epoch 1
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/einops/einops.py", line 532, in reduce
+    return _apply_recipe(
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/einops/einops.py", line 235, in _apply_recipe
+    init_shapes, axes_reordering, reduced_axes, added_axes, final_shapes, n_axes_w_added = _reconstruct_from_shape(
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/einops/einops.py", line 184, in _reconstruct_from_shape_uncached
+    raise EinopsError(f"Shape mismatch, {length} != {known_product}")
+einops.EinopsError: Shape mismatch, 4 != 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/johnma/afdps-pde/train.py", line 118, in <module>
+    image = make_im_grid(gen_x, (8, 8))
+  File "/home/johnma/afdps-pde/utils.py", line 22, in make_im_grid
+    im = rearrange(im, '(x y) h w c -> (x h) (y w) c', x=B//x, y=B//y).numpy().astype(np.uint8)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/einops/einops.py", line 600, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/einops/einops.py", line 542, in reduce
+    raise EinopsError(message + "\n {}".format(e))
+einops.EinopsError:  Error while processing rearrange-reduction pattern "(x y) h w c -> (x h) (y w) c".
+ Input tensor shape: torch.Size([4, 64, 64, 1]). Additional info: {'x': 0, 'y': 0}.
+ Shape mismatch, 4 != 0

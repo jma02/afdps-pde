@@ -1,2 +1,9 @@
 __pycache__/
 unet/__pycache__/
+venv
+
+data/*
+!data/utils/        
+
+unet.pt
+ema_sd.pt

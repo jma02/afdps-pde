@@ -1,0 +1,269 @@
+Train set shape: torch.Size([21000, 1, 64, 64])
+Validation set shape: torch.Size([4500, 1, 64, 64])
+Test set shape: torch.Size([4500, 1, 64, 64])
+Epochs:  11%|█         | 11/100 [17:59<2:25:58, 98.41s/it]
+Epoch 13:  19%|█▉        | 31/164 [00:16<01:12,  1.83it/s] 
+Step: 99 (1) | Loss: 1.00229 | Grad: 0.40642
+Generating samples at epoch 1
+Step: 199 (2) | Loss: 0.98449 | Grad: 0.25062
+Step: 299 (2) | Loss: 0.92991 | Grad: 0.66357
+Generating samples at epoch 2
+Step: 399 (3) | Loss: 0.84186 | Grad: 0.84690
+Generating samples at epoch 3
+Step: 499 (4) | Loss: 0.74470 | Grad: 4.25269
+Step: 599 (4) | Loss: 0.78984 | Grad: 3.17851
+Generating samples at epoch 4
+Step: 699 (5) | Loss: 0.68475 | Grad: 3.78363
+Step: 799 (5) | Loss: 0.74162 | Grad: 5.41991
+Generating samples at epoch 5
+Step: 899 (6) | Loss: 0.65150 | Grad: 7.73443
+Generating samples at epoch 6
+Step: 999 (7) | Loss: 0.64945 | Grad: 13.11768
+Step: 1099 (7) | Loss: 0.59815 | Grad: 9.86350
+Generating samples at epoch 7
+Step: 1199 (8) | Loss: 0.55429 | Grad: 8.51830
+Step: 1299 (8) | Loss: 0.58780 | Grad: 17.52107
+Generating samples at epoch 8
+Step: 1399 (9) | Loss: 0.62296 | Grad: 10.22057
+Generating samples at epoch 9
+Step: 1499 (10) | Loss: 0.53454 | Grad: 9.76979
+Step: 1599 (10) | Loss: 0.51608 | Grad: 16.17081
+Generating samples at epoch 10
+Step: 1699 (11) | Loss: 0.52710 | Grad: 12.33729
+Step: 1799 (11) | Loss: 0.52129 | Grad: 12.77713
+Generating samples at epoch 11
+Step: 1899 (12) | Loss: 0.47224 | Grad: 13.28718
+Generating samples at epoch 12
+Step: 1999 (13) | Loss: 0.47578 | Grad: 12.76015
+Step: 2099 (13) | Loss: 0.48731 | Grad: 11.17229
+Generating samples at epoch 13
+Step: 2199 (14) | Loss: 0.45264 | Grad: 12.76457
+Generating samples at epoch 14
+Step: 2299 (15) | Loss: 0.50048 | Grad: 15.46073
+Step: 2399 (15) | Loss: 0.45859 | Grad: 13.29729
+Generating samples at epoch 15
+Step: 2499 (16) | Loss: 0.46846 | Grad: 12.78065
+Step: 2599 (16) | Loss: 0.48359 | Grad: 12.24806
+Generating samples at epoch 16
+Step: 2699 (17) | Loss: 0.48109 | Grad: 12.38842
+Generating samples at epoch 17
+Step: 2799 (18) | Loss: 0.49261 | Grad: 14.24701
+Step: 2899 (18) | Loss: 0.37672 | Grad: 9.22219
+Generating samples at epoch 18
+Step: 2999 (19) | Loss: 0.45286 | Grad: 18.34798
+Step: 3099 (19) | Loss: 0.39064 | Grad: 12.46771
+Generating samples at epoch 19
+Step: 3199 (20) | Loss: 0.43844 | Grad: 10.24657
+Generating samples at epoch 20
+Step: 3299 (21) | Loss: 0.43708 | Grad: 13.44918
+Step: 3399 (21) | Loss: 0.47951 | Grad: 16.34231
+Generating samples at epoch 21
+Step: 3499 (22) | Loss: 0.45533 | Grad: 13.45276
+Step: 3599 (22) | Loss: 0.46806 | Grad: 10.86488
+Generating samples at epoch 22
+Step: 3699 (23) | Loss: 0.45445 | Grad: 13.81151
+Generating samples at epoch 23
+Step: 3799 (24) | Loss: 0.44801 | Grad: 13.88507
+Step: 3899 (24) | Loss: 0.37165 | Grad: 12.35775
+Generating samples at epoch 24
+Step: 3999 (25) | Loss: 0.44091 | Grad: 13.78764
+Step: 4099 (25) | Loss: 0.42676 | Grad: 10.63223
+Generating samples at epoch 25
+Step: 4199 (26) | Loss: 0.44400 | Grad: 14.99666
+Generating samples at epoch 26
+Step: 4299 (27) | Loss: 0.41237 | Grad: 14.04072
+Step: 4399 (27) | Loss: 0.39719 | Grad: 18.77692
+Generating samples at epoch 27
+Step: 4499 (28) | Loss: 0.39843 | Grad: 25.88283
+Generating samples at epoch 28
+Step: 4599 (29) | Loss: 0.37533 | Grad: 14.90586
+Step: 4699 (29) | Loss: 0.38378 | Grad: 16.66339
+Generating samples at epoch 29
+Step: 4799 (30) | Loss: 0.33381 | Grad: 29.84060
+Step: 4899 (30) | Loss: 0.38233 | Grad: 13.36371
+Generating samples at epoch 30
+Step: 4999 (31) | Loss: 0.38034 | Grad: 16.66175
+Generating samples at epoch 31
+Step: 5099 (32) | Loss: 0.30942 | Grad: 12.88227
+Step: 5199 (32) | Loss: 0.37897 | Grad: 16.22372
+Generating samples at epoch 32
+Step: 5299 (33) | Loss: 0.35733 | Grad: 13.41020
+Step: 5399 (33) | Loss: 0.29503 | Grad: 19.00863
+Generating samples at epoch 33
+Step: 5499 (34) | Loss: 0.29769 | Grad: 15.32018
+Generating samples at epoch 34
+Step: 5599 (35) | Loss: 0.34683 | Grad: 20.18950
+Step: 5699 (35) | Loss: 0.34311 | Grad: 16.08723
+Generating samples at epoch 35
+Step: 5799 (36) | Loss: 0.32060 | Grad: 25.95429
+Step: 5899 (36) | Loss: 0.32764 | Grad: 22.90026
+Generating samples at epoch 36
+Step: 5999 (37) | Loss: 0.29616 | Grad: 18.36130
+Generating samples at epoch 37
+Step: 6099 (38) | Loss: 0.30529 | Grad: 41.42833
+Step: 6199 (38) | Loss: 0.30020 | Grad: 10.82125
+Generating samples at epoch 38
+Step: 6299 (39) | Loss: 0.25172 | Grad: 15.63107
+Generating samples at epoch 39
+Step: 6399 (40) | Loss: 0.29925 | Grad: 18.32064
+Step: 6499 (40) | Loss: 0.28191 | Grad: 33.14260
+Generating samples at epoch 40
+Step: 6599 (41) | Loss: 0.23342 | Grad: 24.75203
+Step: 6699 (41) | Loss: 0.29142 | Grad: 22.79062
+Generating samples at epoch 41
+Step: 6799 (42) | Loss: 0.23439 | Grad: 31.52397
+Generating samples at epoch 42
+Step: 6899 (43) | Loss: 0.24508 | Grad: 35.86091
+Step: 6999 (43) | Loss: 0.23802 | Grad: 16.68943
+Generating samples at epoch 43
+Step: 7099 (44) | Loss: 0.26251 | Grad: 17.99830
+Step: 7199 (44) | Loss: 0.20068 | Grad: 29.01371
+Generating samples at epoch 44
+Step: 7299 (45) | Loss: 0.29153 | Grad: 36.35758
+Generating samples at epoch 45
+Step: 7399 (46) | Loss: 0.22230 | Grad: 29.68315
+Step: 7499 (46) | Loss: 0.25813 | Grad: 25.08086
+Generating samples at epoch 46
+Step: 7599 (47) | Loss: 0.23867 | Grad: 14.43553
+Step: 7699 (47) | Loss: 0.26511 | Grad: 60.22164
+Generating samples at epoch 47
+Step: 7799 (48) | Loss: 0.22911 | Grad: 18.05571
+Generating samples at epoch 48
+Step: 7899 (49) | Loss: 0.20496 | Grad: 37.67900
+Step: 7999 (49) | Loss: 0.30513 | Grad: 93.15147
+Generating samples at epoch 49
+Step: 8099 (50) | Loss: 0.23480 | Grad: 25.85463
+Step: 8199 (50) | Loss: 0.16230 | Grad: 42.41436
+Generating samples at epoch 50
+Step: 8299 (51) | Loss: 0.28335 | Grad: 25.59234
+Generating samples at epoch 51
+Step: 8399 (52) | Loss: 0.21606 | Grad: 21.23524
+Step: 8499 (52) | Loss: 0.17022 | Grad: 29.80942
+Generating samples at epoch 52
+Step: 8599 (53) | Loss: 0.22154 | Grad: 40.19931
+Generating samples at epoch 53
+Step: 8699 (54) | Loss: 0.23363 | Grad: 22.40618
+Step: 8799 (54) | Loss: 0.25553 | Grad: 17.37484
+Generating samples at epoch 54
+Step: 8899 (55) | Loss: 0.19681 | Grad: 26.50870
+Step: 8999 (55) | Loss: 0.21768 | Grad: 22.16356
+Generating samples at epoch 55
+Step: 9099 (56) | Loss: 0.18878 | Grad: 49.00097
+Generating samples at epoch 56
+Step: 9199 (57) | Loss: 0.24924 | Grad: 82.77944
+Step: 9299 (57) | Loss: 0.16175 | Grad: 40.62711
+Generating samples at epoch 57
+Step: 9399 (58) | Loss: 0.18077 | Grad: 21.19019
+Step: 9499 (58) | Loss: 0.25880 | Grad: 26.68856
+Generating samples at epoch 58
+Step: 9599 (59) | Loss: 0.23570 | Grad: 32.68759
+Generating samples at epoch 59
+Step: 9699 (60) | Loss: 0.16286 | Grad: 18.75002
+Step: 9799 (60) | Loss: 0.22582 | Grad: 51.74975
+Generating samples at epoch 60
+Step: 9899 (61) | Loss: 0.20274 | Grad: 22.57598
+Step: 9999 (61) | Loss: 0.49348 | Grad: 11.27355
+Generating samples at epoch 61
+Step: 10099 (62) | Loss: 0.23313 | Grad: 24.99197
+Generating samples at epoch 62
+Step: 10199 (63) | Loss: 0.22669 | Grad: 35.88608
+Step: 10299 (63) | Loss: 0.22832 | Grad: 21.91879
+Generating samples at epoch 63
+Step: 10399 (64) | Loss: 0.22397 | Grad: 20.31362
+Generating samples at epoch 64
+Step: 10499 (65) | Loss: 0.20837 | Grad: 11.36545
+Step: 10599 (65) | Loss: 0.20880 | Grad: 39.16992
+Generating samples at epoch 65
+Step: 10699 (66) | Loss: 0.21518 | Grad: 28.54386
+Step: 10799 (66) | Loss: 0.20253 | Grad: 35.24311
+Generating samples at epoch 66
+Step: 10899 (67) | Loss: 0.20153 | Grad: 15.11517
+Generating samples at epoch 67
+Step: 10999 (68) | Loss: 0.23229 | Grad: 15.21706
+Step: 11099 (68) | Loss: 0.17767 | Grad: 24.29663
+Generating samples at epoch 68
+Step: 11199 (69) | Loss: 0.21870 | Grad: 39.57124
+Step: 11299 (69) | Loss: 0.18621 | Grad: 27.13699
+Generating samples at epoch 69
+Step: 11399 (70) | Loss: 0.25074 | Grad: 35.65433
+Generating samples at epoch 70
+Step: 11499 (71) | Loss: 0.19478 | Grad: 25.41517
+Step: 11599 (71) | Loss: 0.23861 | Grad: 25.49219
+Generating samples at epoch 71
+Step: 11699 (72) | Loss: 0.17869 | Grad: 34.78953
+Step: 11799 (72) | Loss: 0.25332 | Grad: 73.64241
+Generating samples at epoch 72
+Step: 11899 (73) | Loss: 0.14190 | Grad: 32.04018
+Generating samples at epoch 73
+Step: 11999 (74) | Loss: 0.15627 | Grad: 14.00512
+Step: 12099 (74) | Loss: 0.16893 | Grad: 22.70462
+Generating samples at epoch 74
+Step: 12199 (75) | Loss: 0.23184 | Grad: 23.21646
+Step: 12299 (75) | Loss: 0.20070 | Grad: 18.54301
+Generating samples at epoch 75
+Step: 12399 (76) | Loss: 0.16707 | Grad: 21.06022
+Generating samples at epoch 76
+Step: 12499 (77) | Loss: 0.21513 | Grad: 23.00449
+Step: 12599 (77) | Loss: 0.20088 | Grad: 25.43965
+Generating samples at epoch 77
+Step: 12699 (78) | Loss: 0.16622 | Grad: 18.72569
+Generating samples at epoch 78
+Step: 12799 (79) | Loss: 0.17599 | Grad: 45.45041
+Step: 12899 (79) | Loss: 0.14421 | Grad: 35.24723
+Generating samples at epoch 79
+Step: 12999 (80) | Loss: 0.16394 | Grad: 33.28170
+Step: 13099 (80) | Loss: 0.15773 | Grad: 26.73162
+Generating samples at epoch 80
+Step: 13199 (81) | Loss: 0.20031 | Grad: 27.52890
+Generating samples at epoch 81
+Step: 13299 (82) | Loss: 0.27216 | Grad: 19.07887
+Step: 13399 (82) | Loss: 0.21787 | Grad: 31.03895
+Generating samples at epoch 82
+Step: 13499 (83) | Loss: 0.20625 | Grad: 51.43715
+Step: 13599 (83) | Loss: 0.17600 | Grad: 23.12515
+Generating samples at epoch 83
+Step: 13699 (84) | Loss: 0.15679 | Grad: 20.53042
+Generating samples at epoch 84
+Step: 13799 (85) | Loss: 0.16583 | Grad: 48.11514
+Step: 13899 (85) | Loss: 0.18727 | Grad: 50.36102
+Generating samples at epoch 85
+Step: 13999 (86) | Loss: 0.19649 | Grad: 66.30764
+Step: 14099 (86) | Loss: 0.19040 | Grad: 27.36354
+Generating samples at epoch 86
+Step: 14199 (87) | Loss: 0.13532 | Grad: 44.13739
+Generating samples at epoch 87
+Step: 14299 (88) | Loss: 0.16329 | Grad: 13.81794
+Step: 14399 (88) | Loss: 0.17765 | Grad: 44.48359
+Generating samples at epoch 88
+Step: 14499 (89) | Loss: 0.15702 | Grad: 37.86721
+Generating samples at epoch 89
+Step: 14599 (90) | Loss: 0.19121 | Grad: 32.83280
+Step: 14699 (90) | Loss: 0.21445 | Grad: 16.84193
+Generating samples at epoch 90
+Step: 14799 (91) | Loss: 0.17235 | Grad: 29.44803
+Step: 14899 (91) | Loss: 0.11680 | Grad: 18.75805
+Generating samples at epoch 91
+Step: 14999 (92) | Loss: 0.18221 | Grad: 41.51091
+Generating samples at epoch 92
+Step: 15099 (93) | Loss: 0.11806 | Grad: 13.79965
+Step: 15199 (93) | Loss: 0.19218 | Grad: 50.70616
+Generating samples at epoch 93
+Step: 15299 (94) | Loss: 0.19022 | Grad: 26.67510
+Step: 15399 (94) | Loss: 0.19143 | Grad: 29.98948
+Generating samples at epoch 94
+Step: 15499 (95) | Loss: 0.14376 | Grad: 32.12052
+Generating samples at epoch 95
+Step: 15599 (96) | Loss: 0.14798 | Grad: 15.07656
+Step: 15699 (96) | Loss: 0.17047 | Grad: 20.09868
+Generating samples at epoch 96
+Step: 15799 (97) | Loss: 0.17141 | Grad: 27.99826
+Step: 15899 (97) | Loss: 0.15462 | Grad: 29.42599
+Generating samples at epoch 97
+Step: 15999 (98) | Loss: 0.13322 | Grad: 49.42627
+Generating samples at epoch 98
+Step: 16099 (99) | Loss: 0.15868 | Grad: 15.95301
+Step: 16199 (99) | Loss: 0.17126 | Grad: 26.06905
+Generating samples at epoch 99
+Step: 16299 (100) | Loss: 0.11627 | Grad: 16.79487
+Step: 16399 (100) | Loss: 0.14444 | Grad: 22.94288
+Generating samples at epoch 100

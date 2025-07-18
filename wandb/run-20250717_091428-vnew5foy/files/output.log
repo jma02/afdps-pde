@@ -1,0 +1,60 @@
+Train set shape: torch.Size([21000, 1, 64, 64])
+Validation set shape: torch.Size([4500, 1, 64, 64])
+Test set shape: torch.Size([4500, 1, 64, 64])
+Epochs:  11%|█████████████████████▏                                                                                                                                                                           | 11/100 [18:00<2:26:31, 98.78s/it]
+Epoch 13:  19%|███████████████████████████▌                                                                                                                      | 31/164 [00:17<01:13,  1.82it/s]                                               
+Step: 99 (1) | Loss: 0.16175 | Grad: 4.21768
+Generating samples at epoch 1
+Step: 199 (2) | Loss: 0.11380 | Grad: 9.52614
+Step: 299 (2) | Loss: 0.11944 | Grad: 7.79619
+Generating samples at epoch 2
+Step: 399 (3) | Loss: 0.09649 | Grad: 20.39358
+Generating samples at epoch 3
+Step: 499 (4) | Loss: 0.09909 | Grad: 10.36495
+Step: 599 (4) | Loss: 0.11046 | Grad: 19.81425
+Generating samples at epoch 4
+Step: 699 (5) | Loss: 0.13315 | Grad: 26.29666
+Step: 799 (5) | Loss: 0.13361 | Grad: 32.33858
+Generating samples at epoch 5
+Step: 899 (6) | Loss: 0.09004 | Grad: 44.22446
+Generating samples at epoch 6
+Step: 999 (7) | Loss: 0.10317 | Grad: 36.87035
+Step: 1099 (7) | Loss: 0.09679 | Grad: 34.70116
+Generating samples at epoch 7
+Step: 1199 (8) | Loss: 0.08169 | Grad: 33.21896
+Step: 1299 (8) | Loss: 0.08747 | Grad: 34.63801
+Generating samples at epoch 8
+Step: 1399 (9) | Loss: 0.13196 | Grad: 60.79152
+Generating samples at epoch 9
+Step: 1499 (10) | Loss: 0.08743 | Grad: 25.46040
+Step: 1599 (10) | Loss: 0.12134 | Grad: 57.04330
+Generating samples at epoch 10
+Step: 1699 (11) | Loss: 0.11356 | Grad: 34.87986
+Step: 1799 (11) | Loss: 0.08665 | Grad: 33.14323
+Generating samples at epoch 11
+Step: 1899 (12) | Loss: 0.09864 | Grad: 16.39968
+Generating samples at epoch 12
+Step: 1999 (13) | Loss: 0.11905 | Grad: 28.28731
+Step: 2099 (13) | Loss: 0.08060 | Grad: 28.41950
+Generating samples at epoch 13
+Step: 2199 (14) | Loss: 0.12036 | Grad: 28.90331
+Generating samples at epoch 14
+Step: 2299 (15) | Loss: 0.08326 | Grad: 23.31281
+Step: 2399 (15) | Loss: 0.12404 | Grad: 48.32263
+Generating samples at epoch 15
+Step: 2499 (16) | Loss: 0.12391 | Grad: 47.38773
+Step: 2599 (16) | Loss: 0.14834 | Grad: 34.05149
+Generating samples at epoch 16
+Step: 2699 (17) | Loss: 0.14089 | Grad: 44.37966
+Generating samples at epoch 17
+Step: 2799 (18) | Loss: 0.13484 | Grad: 16.52341
+Step: 2899 (18) | Loss: 0.14420 | Grad: 24.88214
+  File "/home/johnma/afdps-pde/train.py", line 80, in <module>
+    loss.backward()
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,26 @@
+Train set shape: torch.Size([5388, 64, 64])
+Validation set shape: torch.Size([1024, 64, 64])
+Test set shape: torch.Size([1948, 64, 64])
+Epochs:   0%|          | 0/100 [00:00<?, ?it/s]
+Traceback (most recent call last):             
+  File "/home/johnma/afdps-pde/train.py", line 81, in <module>
+    loss = loss_fn(model, x)
+  File "/home/johnma/afdps-pde/train.py", line 24, in loss_fn
+    score = score_fn(perturbed_data, t)
+  File "/home/johnma/afdps-pde/sdes/sub_vpsde.py", line 57, in score_fn
+    score = model(x, labels)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/johnma/afdps-pde/unet/default.py", line 61, in forward
+    x = self.input_proj(x)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/johnma/afdps-pde/venv/lib64/python3.9/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: Given groups=1, weight of size [128, 1, 3, 3], expected input[128, 128, 64, 64] to have 1 channels, but got 128 channels instead
