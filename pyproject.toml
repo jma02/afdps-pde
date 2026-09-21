@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "afdps-pde"
+version = "0.1.0"
+description = "Research implementation of approximation-free diffusion posterior sampling"
+authors = [
+    { name = "Jonathan Ma", email = "johnma@udel.edu" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["torch>=2.2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4,<9", "ruff>=0.9,<1", "build>=1,<2"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["afdps*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+afdps = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 88
+extend-exclude = ["venv", ".venv"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
