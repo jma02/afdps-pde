@@ -10,6 +10,11 @@ custom grids, and scalar diagnostics. Analytic Gaussian examples exercise both
 stages. This is **not** a reproduction of the pretrained-image experiments:
 finite particles, Euler integration, and ULA introduce numerical error.
 
+[`train-edm/`](train-edm/README.md) adds a compact unconditional EDM trainer,
+resumable optimizer/EMA checkpoints, Heun generation, held-out denoising loss,
+and a score/schedule adapter for checkpoints trained here. Its small custom
+U-Net is not a reproduction of NVIDIA's architectures or pretrained checkpoints.
+
 ## Setup
 
 Python 3.9+ is supported; Python 3.11/3.12 is convenient for a fresh environment.
@@ -22,8 +27,8 @@ python -m pip install -e '.[dev]'
 python -m pytest
 python examples/linear_gaussian_posterior.py --variant sde
 python examples/linear_gaussian_posterior.py --variant ode
-python -m ruff check src/afdps tests examples
-python -m ruff format --check src/afdps tests examples
+python -m ruff check src tests examples train-edm
+python -m ruff format --check src tests examples train-edm
 ```
 
 The existing local `venv` combines PyTorch 2.2.2 with NumPy 2.0.2 and emits an ABI
@@ -115,9 +120,10 @@ numerical operations remain independently testable functions.
   model-induced posterior. Endpoint scores must be finite. No clipping, jitter,
   terminal denoising, forced resampling, or evidence estimation is hidden here.
 
-Pretrained adapters, general/nonlinear Stage I, training, scalable derivative
-estimators, physical PDE solvers, and experiment presets remain outside scope.
+Third-party pretrained adapters, general/nonlinear Stage I, scalable derivative
+estimators, physical PDE solvers, and paper-scale experiment presets remain outside scope.
 See [architecture and equations](docs/architecture.md) and
 `examples/linear_gaussian_stage1.py` for an isolated Stage I check.
-Tests live in `tests/`; all source code is in `src/afdps/`.
+Inference lives in `src/afdps/`, training in `train-edm/train_edm/`, and tests
+in `tests/` and `train-edm/tests/`.
 Downloads remain opt-in; no datasets or pretrained weights are bundled.

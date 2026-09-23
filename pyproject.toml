@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=64.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -14,22 +14,26 @@ requires-python = ">=3.9"
 dependencies = ["torch>=2.2,<3"]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.4,<9", "ruff>=0.9,<1", "build>=1,<2"]
+dev = ["pytest>=7.4,<9", "ruff>=0.9,<1", "build>=1,<2", "pillow>=10,<13"]
+train = ["pillow>=10,<13"]
+
+[project.scripts]
+train-edm = "train_edm.__main__:main"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = {"" = "src", "train_edm" = "train-edm/train_edm"}
 
 [tool.setuptools.packages.find]
-where = ["src"]
-include = ["afdps*"]
+where = ["src", "train-edm"]
+include = ["afdps*", "train_edm*"]
 namespaces = false
 
 [tool.setuptools.package-data]
 afdps = ["py.typed"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src"]
+testpaths = ["tests", "train-edm/tests"]
+pythonpath = ["src", "train-edm"]
 addopts = "-ra"
 
 [tool.ruff]

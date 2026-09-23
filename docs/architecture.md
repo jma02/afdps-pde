@@ -244,10 +244,14 @@ outputs must not be used as a marginal-likelihood/evidence estimator.
    fixed next-time ULA evaluations, correct noise amplitude, and convergence of
    the uncorrected ODE to an analytic Gaussian flow as the grid is refined.
    Finite-step ULA posterior checks allow numerical/statistical error.
-5. **Next: real priors and applications.** Add explicit EDM/VP checkpoint adapters,
-   scalable likelihood derivative evaluators, matrix-free imaging/PDE operators,
-   and experiment configs. Keep downloads and training opt-in. Generic exact
-   Hessian traces are a correctness baseline, not a large-image implementation.
+5. **Done: a compact unconditional EDM baseline.** `train-edm/` provides a custom
+   U-Net, EDM loss/preconditioning, optimizer/EMA/RNG checkpoints, Heun generation,
+   and a score/schedule adapter for its own checkpoints. See its README for the
+   positive-noise endpoint and learned-prior Stage-I limitations.
+6. **Next: larger priors and applications.** Add third-party EDM/VP checkpoint
+   adapters, scalable likelihood derivatives, matrix-free imaging/PDE operators,
+   and experiment configs. Generic exact Hessian traces remain a correctness
+   baseline, not a large-image implementation. Downloads remain opt-in.
 
 ## Interpretation and reproduction cautions
 
